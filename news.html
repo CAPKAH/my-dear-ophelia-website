@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>News - My Dear Ophelia</title>
+    <link href="jimmystyle.css" rel="stylesheet">
+</head>
+
+<body class="news-page">
+
+<a href="index.html">
+    <img src="images/logo.png" class="page-logo">
+</a>
+
+<div class="sidebar">
+    <a href="mybeloved.html">
+        <img src="images/ui/about.png">
+    </a>
+
+    <a href="Iwillhelpher.HTML">
+        <img src="images/ui/help.png">
+    </a>
+
+    <a href="https://gamejolt.com/games/mydearophelia/1085453">
+        <img src="images/ui/buynow.png">
+    </a>
+</div>
+
+<img src="images/news.gif" class="about-title">
+
+<div class="content">
+
+    <h2>Basic Needs System</h2>
+
+    <img src="images/news/noticia1.png" class="news-image">
+
+    <p>
+        Taking care of Ophelia is more than just playing games and dressing her up! We've added four basic needs that you'll have to keep an eye on: Energy, Hunger, Hygiene, and Health.
+    </p>
+
+    <p>
+        Every interaction with Ophelia can affect her needs, and they can also affect one another. Playing too much can make her tired, while neglecting her hygiene can eventually affect her health. Keep an eye on Ophelia and make sure she has everything she needs to stay happy and healthy!
+    </p>
+
+    <p class="update">
+        Last updated:
+        July 01, 2006
+    </p>
+
+    <hr>
+
+    <h2>Ophelia's Wardrobe</h2>
+
+    <img src="images/news/noticia2.png" class="news-image">
+
+    <p>
+        Give Ophelia a style that's all her own! Her wardrobe includes all kinds of cosmetics, hairstyles, shirts, dresses, and plenty of other accessories to choose from. Mix and match different pieces to create the perfect look for her!
+    </p>
+
+    <p>
+        With so many combinations available, you can change Ophelia's appearance whenever you want. Try different styles, experiment with new outfits, and find the ones that suit her best.
+    </p>
+
+    <p>
+        After all, Ophelia is counting on you to decide what she should wear.
+    </p>
+
+    <p class="update">
+        Last updated:
+        June 26, 2006
+    </p>
+
+    <hr>
+
+    <h2>6D697373696E67206769726C</h2>
+
+    <img src="images/news/noticia3.png" class="news-image" id="news-glitch">
+
+    <p class="update">
+        Last updated:
+        June 21, 2006
+    </p>
+
+    <img src="images/Door.png" id="door" class="door">
+
+</div>
+
+<script>
+(function () {
+
+    // ---------- Config ----------
+    const GLITCH_MIN_DURATION_MS = 20;
+    const GLITCH_MAX_DURATION_MS = 100;
+    const GLITCH_MIN_INTERVAL_MS = 20;
+    const GLITCH_MAX_INTERVAL_MS = 45;
+    const BLACK_IMAGE_SRC = "images/news/BlackImage.png";
+    const SECRET_PAGE_URL = "Case file.HTML";
+
+    // ---------- Elements ----------
+    const glitchImage = document.getElementById("news-glitch");
+    const door = document.getElementById("door");
+
+    // ---------- State ----------
+    let blackImage = null;
+    let glitchActive = false;
+
+    // ---------- Setup ----------
+
+    function preloadBlackImage() {
+        const img = new Image();
+        img.src = BLACK_IMAGE_SRC;
+        img.onload = function () {
+            img.style.position = "absolute";
+            img.style.display = "none";
+            img.style.pointerEvents = "none";
+            img.style.zIndex = "9999";
+            document.body.appendChild(img);
+            blackImage = img;
+        };
+    }
+
+    function positionBlackImageOverGlitchTarget() {
+        const rect = glitchImage.getBoundingClientRect();
+        blackImage.style.left = (rect.left + window.scrollX) + "px";
+        blackImage.style.top = (rect.top + window.scrollY) + "px";
+        blackImage.style.width = rect.width + "px";
+        blackImage.style.height = rect.height + "px";
+    }
+
+    // ---------- Glitch loop ----------
+
+    function randomBetween(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+
+    function runGlitchCycle() {
+        blackImage.style.display = "block";
+
+        setTimeout(function () {
+            blackImage.style.display = "none";
+        }, randomBetween(GLITCH_MIN_DURATION_MS, GLITCH_MAX_DURATION_MS));
+
+        setTimeout(
+            runGlitchCycle,
+            randomBetween(GLITCH_MIN_INTERVAL_MS, GLITCH_MAX_INTERVAL_MS)
+        );
+    }
+
+    // ---------- Secret page unlock ----------
+
+    function goToSecretPage() {
+        window.location.href = SECRET_PAGE_URL;
+    }
+
+    function unlockGlitchImageLink() {
+        glitchImage.style.cursor = "pointer";
+        glitchImage.addEventListener("click", goToSecretPage);
+    }
+
+    function startGlitchEffect() {
+        if (glitchActive || !blackImage) return;
+
+        glitchActive = true;
+        positionBlackImageOverGlitchTarget();
+        runGlitchCycle();
+        unlockGlitchImageLink();
+    }
+
+    // ---------- Event handlers ----------
+
+    function onDoorClick() {
+        if (localStorage.getItem("keyFound") !== "true") return;
+
+        door.style.display = "none";
+        startGlitchEffect();
+    }
+
+    // ---------- Init ----------
+
+    preloadBlackImage();
+    door.addEventListener("click", onDoorClick);
+
+})();
+</script>
+
+</body>
+
+</html>

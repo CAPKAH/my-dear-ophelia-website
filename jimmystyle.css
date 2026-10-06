@@ -1,0 +1,356 @@
+/* =========================
+   FUNDO DO SITE
+========================= */
+
+body {
+
+    line-height: 1;
+
+    background-image: url("backgrounds/Background.png");
+    background-repeat: repeat;
+    background-size: 300px 300px;
+
+    margin: 0;
+    padding: 30px;
+
+}
+
+body.about-page {
+
+    background-image: url("backgrounds/Background2.png");
+
+}
+
+body.news-page {
+
+    background-image: url("backgrounds/Background3.png");
+
+}
+
+body.help-page {
+
+    background-image: url("backgrounds/Background4.png");
+
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+
+    position: relative;
+
+    width: 500px;
+    height: auto;
+
+    display: block;
+    margin: 0 auto;
+
+    image-rendering: pixelated;
+
+    z-index: 999;
+
+}
+
+.page-logo {
+
+    position: fixed;
+
+    left: 35px;
+    top: -10px;
+
+    width: 310px;
+    height: auto;
+
+    image-rendering: pixelated;
+
+    z-index: 998;
+
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar-header {
+
+    position: fixed;
+
+    left: 50px;
+    top: 40px;
+
+    width: 300px;
+
+    image-rendering: pixelated;
+
+    z-index: 998;
+
+}
+
+.sidebar-title {
+
+    position: fixed;
+
+    left: 50px;
+    top: 150px;
+
+    width: 300px;
+
+    text-align: center;
+
+    font-family: "Comic Sans MS", cursive;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    color: #000000;
+
+    z-index: 998;
+
+}
+
+.sidebar {
+
+    position: fixed;
+
+    left: 80px;
+    top: 125px;
+
+    width: 150px;
+
+    border-image: url("images/ui/sidebar.png") 16 fill;
+    border-width: 16px;
+    border-style: solid;
+
+    padding: 20px;
+
+    z-index: 1;
+
+}
+
+.sidebar img {
+
+    width: 120px;
+    height: auto;
+
+    display: block;
+
+    margin: 20px auto;
+
+    image-rendering: pixelated;
+
+}
+
+.sidebar a:hover {
+
+    opacity: 0.8;
+
+}
+
+
+/* =========================
+   PAINEL PRINCIPAL
+========================= */
+
+.content {
+
+    position: absolute;
+
+    left: 425px;
+    top: 330px;
+
+    width: 500px;
+
+    min-height: 600px;
+
+    background-color: pink;
+
+    outline: 1px solid lch(23.8% 46.16 13.28);
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+}
+
+.about-title {
+
+    position: absolute;
+
+    left: 425px;
+    top: 30px;
+
+    width: 500px;
+    height: auto;
+
+    image-rendering: pixelated;
+
+    z-index: 998;
+
+}
+
+
+/* =========================
+   TIPOGRAFIA
+========================= */
+
+.content h2 {
+
+    font-family: "Comic Sans MS", cursive;
+    color: lch(35.9% 60.94 14.05);
+
+    text-align: center;
+
+    margin-top: 0;
+
+}
+
+p {
+
+    font-size: 110%;
+    font-family: Verdana;
+    color: lch(23.8% 46.16 13.28);
+
+    line-height: 140%;
+
+    margin: 0 0 20px 0;
+
+    padding: 0;
+
+}
+
+.content p {
+
+    font-family: "Comic Sans MS", cursive;
+
+}
+
+ul {
+
+    font-size: 110%;
+    font-family: Verdana;
+
+    line-height: 125%;
+
+    padding-left: 25px;
+
+}
+
+p a {
+
+    color: blue;
+    text-decoration: none;
+
+}
+
+p a:hover {
+
+    color: purple;
+    text-decoration: underline;
+
+}
+
+
+/* =========================
+   UPDATE
+========================= */
+
+.update {
+
+    text-align: center;
+
+    font-size: 85%;
+
+    color: lch(23.8% 46.16 13.28);
+    font-style: italic;
+
+    line-height: 120%;
+
+}
+
+
+/* =========================
+   DIVISOR
+========================= */
+
+hr {
+
+    border: 0;
+
+    border-top: 1px solid #d862a3;
+
+    border-bottom: 1px solid white;
+
+    margin: 20px 0;
+
+}
+
+
+/* =========================
+   IMAGENS DAS NOTÍCIAS
+========================= */
+
+.news-image {
+
+    width: 450px;
+    height: auto;
+
+    display: block;
+    margin: 10px auto 20px auto;
+
+    border: 1px solid lch(23.8% 46.16 13.28);
+
+    image-rendering: pixelated;
+
+}
+
+
+/* =========================
+   ELEMENTOS INTERATIVOS
+========================= */
+
+.key {
+
+    position: relative;
+
+    width: 50px;
+    height: auto;
+
+    display: block;
+
+    margin-left: auto;
+
+    image-rendering: pixelated;
+
+    cursor: pointer;
+
+}
+
+.door {
+
+    position: absolute;
+
+    width: 80px;
+    height: auto;
+
+    image-rendering: pixelated;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================
+   CLASSES EXTRAS
+========================= */
+
+.myClass {
+
+    text-align: left;
+
+    outline: 2px purple dashed;
+
+}

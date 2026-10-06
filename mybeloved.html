@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>About - My Dear Ophelia</title>
+    <link href="jimmystyle.css" rel="stylesheet">
+</head>
+
+<body class="about-page">
+
+<a href="index.html">
+    <img src="images/logo.png" class="page-logo">
+</a>
+
+<div class="sidebar">
+    <a href="news.html">
+        <img src="images/ui/news.png">
+    </a>
+
+    <a href="Iwillhelpher.HTML">
+        <img src="images/ui/help.png">
+    </a>
+
+    <a href="https://gamejolt.com/games/mydearophelia/1085453">
+        <img src="images/ui/buynow.png">
+    </a>
+</div>
+
+<img src="images/about.gif" class="about-title">
+
+<div class="content">
+
+    <h2>About Ophelia!</h2>
+
+    <p>
+        Ophelia is a kind and affectionate girl who loves spending time with the people she cares about. She's cheerful, gentle, and always happy to have a little fun.
+    </p>
+
+    <p>
+        She's the type of girl who can turn an ordinary day into something special. Whether it's playing games, listening to music, watching something she enjoys, or simply talking about her day, Ophelia always finds a way to keep herself entertained.
+    </p>
+
+    <p>
+        Ophelia can be a little shy at first, but once she gets comfortable, you'll quickly see her playful side. She loves jokes, silly conversations, and discovering new things.
+    </p>
+
+    <p>
+        Most of all, Ophelia loves companionship. She doesn't like being alone for too long. That's why she's so happy to have you around.
+    </p>
+
+    <hr>
+
+    <h2>Her Daily Routine</h2>
+
+    <p>
+        Every day with Ophelia is a little different! You'll get to help her start her morning, choose an outfit for the day, and make sure she has something good to eat before she gets on with her day. Ophelia loves trying on different clothes, so don't be afraid to experiment!
+    </p>
+
+    <p>
+        After getting ready, it's time for breakfast. Make sure Ophelia doesn't skip her meals! Keeping her well-fed and happy is an important part of taking care of her. Once she's ready, there are plenty of things to do. You can spend some time playing one of her favorite minigames, listen to music together, or simply keep her company.
+    </p>
+
+    <p>
+        Of course, Ophelia has things she likes to do on her own, too. Sometimes she'll leave the house for a little while. She usually goes out in the late afternoon, around 4:30 PM, and prefers taking the quieter streets instead of the main road. On her way to the park, she often stops by the little convenience store on the corner, although she rarely buys anything. She usually stays at the park for about twenty minutes before heading back home, and she almost always takes the same route.
+    </p>
+
+    <hr>
+
+    <h2>Little Things About Ophelia</h2>
+
+    <p>
+        There are many little things that make Ophelia who she is. She has a few habits that you may notice as you spend more time with her. For example, she tends to hum quietly when she's concentrating, and she always checks her pockets before leaving the house. She also has a habit of looking at the clock whenever she enters a new room.
+    </p>
+
+    <p>
+        Ophelia usually goes to bed at around 10:30 PM. She likes to leave a glass of water beside her bed before going to sleep, and she always keeps her curtains slightly open. She says she likes being able to see the moon from her window.
+    </p>
+
+    <p>
+        On rainy nights, however, she closes them completely.
+    </p>
+
+    <p>
+        She doesn't like thunderstorms.
+    </p>
+
+    <p>
+        When she can't sleep, she sometimes sits by the window and listens to the rain. She usually stays there for a few minutes before going back to bed. If the rain is particularly heavy, she leaves the bedroom light on until she falls asleep.
+    </p>
+
+    <p>
+        It's funny how many little routines a person can have without even realizing it.
+    </p>
+
+    <p>
+        i noticed quite a few of them.
+    </p>
+
+    <hr>
+
+    <img src="images/Key.png" id="key" class="key">
+
+    <p class="update">
+        Last updated:
+        October 23, 2005
+    </p>
+
+</div>
+
+<script>
+(function () {
+
+    // ---------- Elements ----------
+    const key = document.getElementById("key");
+
+    // ---------- State helpers ----------
+
+    function keyAlreadyFound() {
+        return localStorage.getItem("keyFound") === "true";
+    }
+
+    function markKeyAsFound() {
+        localStorage.setItem("keyFound", "true");
+    }
+
+    function hideKey() {
+        key.style.display = "none";
+    }
+
+    // ---------- Event handlers ----------
+
+    function onKeyClick() {
+        markKeyAsFound();
+        hideKey();
+    }
+
+    // ---------- Init ----------
+
+    if (keyAlreadyFound()) {
+        hideKey();
+    }
+
+    key.addEventListener("click", onKeyClick);
+
+})();
+</script>
+
+</body>
+
+</html>

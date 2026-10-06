@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+
 /* =========================
    FUNDO DO SITE
 ========================= */
@@ -95,7 +98,7 @@ body.news-page {
 
     text-align: center;
 
-    font-family: "Comic Sans MS", cursive;
+    font-family: "Comic Sans MS", "Comic Neue", cursive;
 
     font-size: 24px;
     font-weight: bold;
@@ -193,7 +196,7 @@ body.news-page {
 
 .content h2 {
 
-    font-family: "Comic Sans MS", cursive;
+    font-family: "Comic Sans MS", "Comic Neue", cursive;
     color: lch(35.9% 60.94 14.05);
 
     text-align: center;
@@ -205,7 +208,7 @@ body.news-page {
 p {
 
     font-size: 110%;
-    font-family: Verdana;
+    font-family: Verdana, Geneva, sans-serif;
     color: lch(23.8% 46.16 13.28);
 
     line-height: 140%;
@@ -218,14 +221,14 @@ p {
 
 .content p {
 
-    font-family: "Comic Sans MS", cursive;
+    font-family: "Comic Sans MS", "Comic Neue", cursive;
 
 }
 
 ul {
 
     font-size: 110%;
-    font-family: Verdana;
+    font-family: Verdana, Geneva, sans-serif;
 
     line-height: 125%;
 
